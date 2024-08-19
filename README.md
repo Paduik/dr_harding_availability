@@ -11,11 +11,11 @@ Instructions:
    docker run -p 5000:5000 my-flask-app<br>
 3. Go to http://127.0.0.1:5000/ to play around with the demo. (http://127.0.0.1:5000/)
 
-Project and File Structure: 
--'app': Flask app
--'templates': HTML templates
--'static': Static files - css, js
--'Dockerfile': Congiguration to build the Docker image
--'requirements.txt': Python dependencies 
+Project and File Structure:<br> 
+-'app': Flask app<br>
+-'templates': HTML templates<br>
+-'static': Static files - css, js<br>
+-'Dockerfile': Congiguration to build the Docker image<br>
+-'requirements.txt': Python dependencies<br> 
 
 Author: Luke Trenshaw
