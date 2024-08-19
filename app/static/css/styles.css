@@ -1,0 +1,160 @@
+/* Make it clear date is selectable */
+.bouncy-cursor {
+    position: relative;
+    cursor: pointer;
+}
+
+.bouncy-cursor::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 123, 255, 0.5); 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    pointer-events: none; 
+}
+
+.bouncy-cursor:hover::after {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    40% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    60% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* Popup BG */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popup-buttons {
+    margin-top: 20px;
+}
+
+.popup-buttons button {
+    margin: 0 10px;
+}
+
+.available {
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+td.current-day, td.current-day {
+    border: 2px solid blue; 
+    background-color: #e0f7fa; 
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#key {
+    display: flex;
+    flex-direction: column;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.current-day {
+    background-color: #e0f7fa; 
+    border: 2px solid blue; 
+}
+
+.available {
+    background-color: green; 
+}
+
+.current-day {
+    border: 2px solid blue;
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.available.current-day {
+    background-color: blue;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #f4f4f4;
+}
+
+.table td.available {
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+}
+
+.table td {
+    height: 50px;
+    width: 50px;
+}
+
+h1 {
+    color: #343a40;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1.25em;
+    margin: 0.5em 0;
+}
